@@ -2,7 +2,6 @@ package com.fastcampus.boardpractice.domain;
 
 
 import java.time.LocalDateTime;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Setter
@@ -29,14 +28,14 @@ public class Article {
     private String modifiedBy;
 
     public Article(String title, String content, Integer viewCount, Integer likeCount,
-        String hashtag, String createBy, String modifiedBy) {
+        String hashtag, String createBy) {
         this.title = title;
         this.content = content;
         this.viewCount = viewCount;
         this.likeCount = likeCount;
         this.hashtag = hashtag;
         this.createdBy = createBy;
-        this.modifiedBy = modifiedBy;
+        this.modifiedBy = createBy;
     }
     void test() {
         Article article = new Article(
@@ -45,7 +44,6 @@ public class Article {
             0,
             0,
             "#java",
-            "jihyun",
             "jihyun"
         );
     }
